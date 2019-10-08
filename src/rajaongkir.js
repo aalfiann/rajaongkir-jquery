@@ -1,11 +1,11 @@
 /**
  * RajaOngkir API jQuery plugin
  * @author          M ABD AZIZ ALFIAN
- * @version         1.0.0
+ * @version         1.1.0
  * @repository      https://github.com/aalfiann/rajaongkir-jquery
  */
 (function($){
-    $.fn.rajaongkir = function(type,key) {
+    $.fn.RajaOngkir = function(type,key) {
 
         // Validate parameter type and key is required
         if(!$.trim(type)) throw new Error("RajaOngkir Account Type is required!");

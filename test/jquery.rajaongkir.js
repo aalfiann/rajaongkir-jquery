@@ -13,19 +13,19 @@ describe('jQuery rajaongkir api test', function() {
 
     it('rajaongkir param type is required', function() {
         assert.throws(function() {
-            $().rajaongkir()
+            $().RajaOngkir()
         },Error,"Error Throw");
     });
 
     it('rajaongkir param key is required', function() {
         assert.throws(function() {
-            $().rajaongkir('starter')
+            $().RajaOngkir('starter')
         },Error,"Error Throw");
     });
     
     it('get province', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('starter',apikey_starter);
+        var rajaongkir = $().RajaOngkir('starter',apikey_starter);
         rajaongkir.province().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -37,7 +37,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get province with invalid key', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('starter',apikey_starter);
+        var rajaongkir = $().RajaOngkir('starter',apikey_starter);
         rajaongkir.province().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -49,7 +49,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get city', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('starter',apikey_starter);
+        var rajaongkir = $().RajaOngkir('starter',apikey_starter);
         rajaongkir.city().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -61,7 +61,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get cost', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('starter',apikey_starter);
+        var rajaongkir = $().RajaOngkir('starter',apikey_starter);
         rajaongkir.cost('501','114','1700','jne').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -73,7 +73,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get cost for pro account type', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.cost('501','city','574','subdistrict','1700','jne').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -85,7 +85,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('starter account type is allowed for province, city and cost only', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('starter',apikey_starter);
+        var rajaongkir = $().RajaOngkir('starter',apikey_starter);
         rajaongkir.subdistrict('39').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -97,7 +97,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get subdistrict', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.subdistrict('39').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -109,7 +109,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get internationalOrigin', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.internationalOrigin().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -121,7 +121,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get internationalDestination', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.internationalDestination().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -133,7 +133,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get internationalCost', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.internationalCost('152','108','1400','tiki').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -145,7 +145,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get currency', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.currency().done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();
@@ -157,7 +157,7 @@ describe('jQuery rajaongkir api test', function() {
 
     it('get waybill', function(done) {
         this.timeout(timeout);
-        var rajaongkir = $().rajaongkir('pro',apikey_pro);
+        var rajaongkir = $().RajaOngkir('pro',apikey_pro);
         rajaongkir.waybill('jne','SOCAG00183235715').done(function(result,status) {
             if(status !== 'parsererror') assert.equal(result.rajaongkir.status.code,200);
             done();

@@ -7,8 +7,6 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/aalfiann/rajaongkir-jquery/badge.svg?targetFile=package.json)](https://snyk.io//test/github/aalfiann/rajaongkir-jquery?targetFile=package.json)
 [![dependencies Status](https://david-dm.org/aalfiann/rajaongkir-jquery/status.svg)](https://david-dm.org/aalfiann/rajaongkir-jquery)
 ![License](https://img.shields.io/npm/l/rajaongkir-jquery)
-![NPM download/month](https://img.shields.io/npm/dm/rajaongkir-jquery.svg)
-![NPM download total](https://img.shields.io/npm/dt/rajaongkir-jquery.svg)  
 RajaOngkir API for jQuery
 
 ## Install using NPM
@@ -18,9 +16,9 @@ $ npm install rajaongkir-jquery
 
 ## Or use CDN Directly
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.0.0/src/rajaongkir.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.0/src/rajaongkir.js"></script>
 // or
-<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.0.0/src/rajaongkir.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.0/src/rajaongkir.min.js"></script>
 ```
 
 ## Usage
