@@ -1,7 +1,7 @@
 /**
  * RajaOngkir API jQuery plugin
  * @author          M ABD AZIZ ALFIAN
- * @version         1.1.0
+ * @version         1.1.1
  * @repository      https://github.com/aalfiann/rajaongkir-jquery
  */
 (function($){
@@ -31,6 +31,25 @@
         };
 
         /**
+         * Generate Random Text depend client datetime
+         * @param {int} perMinute
+         * @return {int}
+         */
+        this.randomText = function(perMinute){
+            var d = new Date();
+            var fix = ("00"+(d.getMonth()+1)).slice(-2)+""+("00"+d.getDate()).slice(-2)+""+d.getFullYear()+"-"+("00"+d.getHours()).slice(-2)+"";
+            var rate = d.getMinutes();
+            var maxminute = 60;
+            var intervalminute = perMinute;
+            var n=0;
+            var i;
+            for (i = 0; i <= maxminute; i+=intervalminute) {
+                 if(i<=rate) {n++;}
+             }
+            return fix+n;
+        }
+
+        /**
          * Endpoint builder
          * @param {string} name
          * @return {string}
@@ -40,7 +59,7 @@
             if(name.indexOf('international') !== -1 ) {
                 version = 'v2/';
             }
-            return config.cors_proxy + config.api_url + version + name;
+            return config.cors_proxy + config.api_url + version + name +'?_='+this.randomText(5);
         };
 
         /**
@@ -87,7 +106,7 @@
 
         /**
          * Get Cost
-         * @param {string} originID
+         * @param {string} originId
          * @param {string} destinationId
          * @param {string|int} weight           Weight in gramm
          * @param {string} courier 
@@ -99,9 +118,9 @@
          * @param {string} diameter             [optional] in cm
          * @return {Ajax}
          */
-        this.cost = function(originID,destinationId,weight,courier,originType,destinationType,length,width,height,diameter) {
+        this.cost = function(originId,destinationId,weight,courier,originType,destinationType,length,width,height,diameter) {
             var params = {
-                "origin": originID,
+                "origin": originId,
                 "originType": originType,
                 "destination": destinationId,
                 "destinationType": destinationType,
@@ -159,8 +178,7 @@
 
         /**
          * Get International Destination
-         * @param {string} cityId           [optional]
-         * @param {string} provinceId       [optional]
+         * @param {string} countryId       [optional]
          * @return {Ajax}
          */
         this.internationalDestination = function(countryId) {

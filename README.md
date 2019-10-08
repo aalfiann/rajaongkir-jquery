@@ -16,9 +16,9 @@ $ npm install rajaongkir-jquery
 
 ## Or use CDN Directly
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.0/src/rajaongkir.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.1/src/rajaongkir.js"></script>
 // or
-<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.0/src/rajaongkir.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rajaongkir-jquery@1.1.1/src/rajaongkir.min.js"></script>
 ```
 
 ## Usage
