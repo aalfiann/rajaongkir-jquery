@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/aalfiann/rajaongkir-jquery/badge.svg?branch=master)](https://coveralls.io/github/aalfiann/rajaongkir-jquery?branch=master)
 [![Known Vulnerabilities](https://snyk.io//test/github/aalfiann/rajaongkir-jquery/badge.svg?targetFile=package.json)](https://snyk.io//test/github/aalfiann/rajaongkir-jquery?targetFile=package.json)
 [![dependencies Status](https://david-dm.org/aalfiann/rajaongkir-jquery/status.svg)](https://david-dm.org/aalfiann/rajaongkir-jquery)
-![License](https://img.shields.io/npm/l/rajaongkir-jquery)
+![License](https://img.shields.io/npm/l/rajaongkir-jquery)  
 RajaOngkir API for jQuery
 
 ## Install using NPM
