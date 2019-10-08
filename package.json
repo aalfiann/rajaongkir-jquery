@@ -1,0 +1,32 @@
+{
+  "name": "rajaongkir-jquery",
+  "version": "1.0.0",
+  "description": "RajaOngkir API for jQuery",
+  "main": "src/rajaongkir.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalfiann/rajaongkir-jquery.git"
+  },
+  "keywords": [
+    "rajaongkir",
+    "jquery-plugin"
+  ],
+  "author": "M ABD AZIZ ALFIAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aalfiann/rajaongkir-jquery/issues"
+  },
+  "homepage": "https://github.com/aalfiann/rajaongkir-jquery#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.6",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
+    "mocha": "^6.2.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^14.1.1"
+  }
+}
