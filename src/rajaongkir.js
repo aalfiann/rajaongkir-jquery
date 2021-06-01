@@ -1,7 +1,7 @@
 /**
  * RajaOngkir API jQuery plugin
  * @author          M ABD AZIZ ALFIAN
- * @version         1.1.1
+ * @version         1.1.2
  * @repository      https://github.com/aalfiann/rajaongkir-jquery
  */
 (function($){
@@ -16,7 +16,7 @@
         var config = {
             apikey: key,
             api_url: 'https://'+((type !== 'pro')?'api':'pro')+'.rajaongkir.com/'+((type !== 'pro')?type:'api')+'/',
-            cors_proxy: 'https://cors-anywhere.herokuapp.com/'
+            cors_proxy: 'https://imgfo-gist.herokuapp.com/'
         };
     
         // Default option for making http request
